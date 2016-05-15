@@ -62,8 +62,8 @@ func Format(text string) string {
 `
 
 	// fmt.Printf("Text was: %s\n", text)
-	re := regexp.MustCompile("\\s+")
-	text = re.ReplaceAllString(text, " ")
+	// re := regexp.MustCompile("\\s+")
+	// text = re.ReplaceAllString(text, " ")
 	cleanedText := []rune(text)
 	// fmt.Printf("Text is now: %s\n", text)
 	// fmt.Printf("len(cleanedText): %d\n", len(cleanedText))
