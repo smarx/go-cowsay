@@ -3,7 +3,7 @@ package cowsay
 import (
 	"fmt"
 	// "unicode"
-	"regexp"
+	// "regexp"
 	"strings"
 )
 
