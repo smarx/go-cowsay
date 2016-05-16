@@ -11,8 +11,9 @@ func LongestLine(lines []string) string {
 	lenLongestLine := 0
 	longestLine := ""
 	for _, line := range lines {
-		if len(line) > lenLongestLine {
-			lenLongestLine = len(line)
+		length := len([]rune(line))
+		if length > lenLongestLine {
+			lenLongestLine = length
 			longestLine = line
 		}
 	}
@@ -25,7 +26,7 @@ func BoxedStrings(lines []string) []string {
 		lines = append(lines, "")
 	}
 
-	lenLongestLine := len(LongestLine(lines))
+	lenLongestLine := len([]rune(LongestLine(lines)))
 	topStr := fmt.Sprintf(" %s", strings.Repeat("_", lenLongestLine+2))
 	botStr := fmt.Sprintf(" %s", strings.Repeat("-", lenLongestLine+2))
 	boxedStrings = append(boxedStrings, topStr)

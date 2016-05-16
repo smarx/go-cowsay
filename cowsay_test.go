@@ -26,6 +26,8 @@ func TestCowsay(t *testing.T) {
 	str = Format(fmt.Sprint("Basic Cowsay in Golang!"))
 	fmt.Printf("%s\n", str)
 
+	fmt.Println(Format("I’m a line with a multibyte character."))
+
 	// Test empty string
 	str = Format(fmt.Sprint(""))
 	fmt.Printf("%s\n", str)
